@@ -21,7 +21,7 @@ public class CustomerTest {
                 Amount owed is 2.0
                 You earned 1 frequent renter points""";
 
-        assertEquals(expectedStatement, customer.statement());
+        assertEquals(expectedStatement, customer.buildStatement());
     }
 
     // Тест для звичайного фільму (REGULAR) на 3 дні
@@ -38,7 +38,7 @@ public class CustomerTest {
                 Amount owed is 3.5
                 You earned 1 frequent renter points""";
 
-        assertEquals(expectedStatement, customer.statement());
+        assertEquals(expectedStatement, customer.buildStatement());
     }
 
     // Тест для новинки (NEW_RELEASE) на 1 день
@@ -55,7 +55,7 @@ public class CustomerTest {
                 Amount owed is 3.0
                 You earned 1 frequent renter points""";
 
-        assertEquals(expectedStatement, customer.statement());
+        assertEquals(expectedStatement, customer.buildStatement());
     }
 
     // Тест для новинки (NEW_RELEASE) на 2 дні
@@ -72,7 +72,7 @@ public class CustomerTest {
                 Amount owed is 6.0
                 You earned 2 frequent renter points""";
 
-        assertEquals(expectedStatement, customer.statement());
+        assertEquals(expectedStatement, customer.buildStatement());
     }
 
     // Тест для дитячого фільму (CHILDRENS) на 3 дні
@@ -89,7 +89,7 @@ public class CustomerTest {
                 Amount owed is 1.5
                 You earned 1 frequent renter points""";
 
-        assertEquals(expectedStatement, customer.statement());
+        assertEquals(expectedStatement, customer.buildStatement());
     }
 
     // Тест для дитячого фільму (CHILDRENS) на 4 дні
@@ -106,7 +106,7 @@ public class CustomerTest {
                 Amount owed is 3.0
                 You earned 1 frequent renter points""";
 
-        assertEquals(expectedStatement, customer.statement());
+        assertEquals(expectedStatement, customer.buildStatement());
     }
 
     // Тест для клієнта з різними типами фільмів
@@ -131,7 +131,7 @@ public class CustomerTest {
                 Amount owed is 14.0
                 You earned 4 frequent renter points""";
 
-        assertEquals(expectedStatement, customer.statement());
+        assertEquals(expectedStatement, customer.buildStatement());
     }
 
     // Тест для порожнього списку оренд
@@ -145,7 +145,7 @@ public class CustomerTest {
                 Amount owed is 0.0
                 You earned 0 frequent renter points""";
 
-        assertEquals(expectedStatement, customer.statement());
+        assertEquals(expectedStatement, customer.buildStatement());
     }
 
     // Тест для фільму з нульовою кількістю днів оренди
@@ -162,7 +162,7 @@ public class CustomerTest {
             Amount owed is 2.0
             You earned 1 frequent renter points""";
 
-        assertEquals(expectedStatement, customer.statement());
+        assertEquals(expectedStatement, customer.buildStatement());
     }
 
 }
